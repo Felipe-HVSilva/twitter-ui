@@ -1,0 +1,130 @@
+.sidebar {
+  padding: 1.5rem 1.25rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sidebar .logo {
+  width: 2rem;
+  height: 2rem;
+}
+
+.sidebar .new-tweet {
+  background: var(--twitter-blue);
+  border: none;
+  border-radius: 99999px;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 900;
+  transition: filter 0.3s ease;
+}
+
+.sidebar .new-tweet svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: none;
+}
+
+.sidebar .new-tweet:hover {
+  filter: brightness(0.95);
+}
+
+.main-navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.main-navigation a {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.main-navigation a.active {
+  color: var(--twitter-blue);
+}
+
+.main-navigation a svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.SwitchRoot {
+  width: 42px;
+  height: 25px;
+  background-color: #fff;
+  border-radius: 9999px;
+  position: relative;
+  box-shadow: 0 2px 10px var(--blackA7);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.SwitchRoot:focus {
+  box-shadow: 0 0 0 2px black;
+}
+
+.SwitchRoot[data-state="checked"] {
+  background-color: black;
+}
+
+.SwitchThumb {
+  display: block;
+  width: 21px;
+  height: 21px;
+  background-color: #000;
+  border-radius: 9999px;
+  box-shadow: 0 2px 2px var(--blackA7);
+  transition: transform 100ms;
+  transform: translateX(2px);
+  will-change: transform;
+}
+
+.SwitchThumb[data-state="checked"] {
+  transform: translateX(19px);
+  background-color: #fff;
+}
+
+.Label {
+  color: #000;
+  font-size: 15px;
+  line-height: 1;
+}
+
+.dark .label {
+  color: #fff;
+}
+
+@media (max-width: 780px) {
+  .sidebar {
+    padding: 1.5rem 0.75rem;
+    align-items: center;
+  }
+
+  .main-navigation a span {
+    display: none;
+  }
+  .sidebar .new-tweet svg {
+    display: block;
+  }
+
+  .sidebar .new-tweet span {
+    display: none;
+  }
+
+  .Label {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+}
